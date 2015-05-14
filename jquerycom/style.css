@@ -40,13 +40,13 @@ a,
 	overflow: hidden;
 }
 .lightweight-footprint .feature-box-image {
-	background: url('i/feature-sprites.png') 0px 0px no-repeat;
+	background: url('./images/feature-sprites.png') 0px 0px no-repeat;
 }
 .css3-compliant .feature-box-image{
-	background: url('i/feature-sprites.png') -139px 0px no-repeat;
+	background: url('./images/feature-sprites.png') -139px 0px no-repeat;
 }
 .cross-browser .feature-box-image{
-	background: url('i/feature-sprites.png') -278px 0px no-repeat;
+	background: url('./images/feature-sprites.png') -278px 0px no-repeat;
 	transition: all 0.4s;
 	position: relative;
 	z-index: 10;
@@ -92,7 +92,7 @@ a,
 	font-size: 0.6em;
 }
 #content #banner-secondary .download-main > a span.download {
-	background: url('i/download.png') 0px 0px;
+	background: url('./images/download.png') 0px 0px;
 	width: 44px;
 	height:37px;
 	position: relative;
@@ -112,7 +112,7 @@ a,
 }
 
 #content li.try-jquery a {
-	background: url('i/try-jquery.jpg') top left no-repeat;
+	background: url('./images/try-jquery.jpg') top left no-repeat;
 	background-size: 100%;
 	height: 126px;
 	width: 277px;
@@ -123,7 +123,7 @@ a,
 
 @media only screen and (-webkit-device-pixel-ratio: 2) {
 	#content li.try-jquery a {
-		background-image: url('i/try-jquery@2x.jpg');
+		background-image: url('./images/try-jquery@2x.jpg');
 	}
 }
 

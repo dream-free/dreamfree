@@ -112,10 +112,10 @@ body {
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url('fonts/fontawesome-webfont.eot?v=3.0.2');
-  src: url('fonts/fontawesome-webfont.eot?#iefix&v=3.0.2') format('embedded-opentype'),
-    url('fonts/fontawesome-webfont.woff?v=3.0.2') format('woff'),
-    url('fonts/fontawesome-webfont.ttf?v=3.0.2') format('truetype');
+  src: url('http://jquery.com/jquery-wp-content/themes/jquery/css/fonts/fontawesome-webfont.eot?v=3.0.2');
+  src: url('http://jquery.com/jquery-wp-content/themes/jquery/css/fonts/fontawesome-webfont.eot?#iefix&v=3.0.2') format('embedded-opentype'),
+    url('http://jquery.com/jquery-wp-content/themes/jquery/css/fonts/fontawesome-webfont.woff?v=3.0.2') format('woff'),
+    url('http://jquery.com/jquery-wp-content/themes/jquery/css/fonts/fontawesome-webfont.ttf?v=3.0.2') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -921,6 +921,7 @@ ul.icons li [class*=" icon-"] {
     height: .75em;
   }
 }
+/*外部引用字体来优化图标文字等*/
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
     readers do not read off random characters that represent icons */
 .icon-glass:before                { content: "\f000"; }
@@ -1252,7 +1253,7 @@ iframe {
 }
 
 .jquery-learn #container {
-	background: url(../images/bg-body-learn.jpg) no-repeat center top #000;
+	background: url(./images/bg-body-learn.jpg) no-repeat center top #000;
 }
 
 #content-wrapper {
@@ -1341,7 +1342,7 @@ iframe {
    ========================================================================== */
 
 #global-nav {
-	background: url(../images/jq-global-nav.png) repeat-x 0 bottom #1b1b1b;
+	background: url(./images/jq-global-nav.png) repeat-x 0 bottom #1b1b1b;
 }
 
 #global-nav nav {
@@ -1382,7 +1383,7 @@ iframe {
 }
 
 #global-nav nav ul li:hover {
-	background: url(../images/bg-footer-noise.jpg) #000;
+	background: url(./images/bg-footer-noise.jpg) #000;
 	color: #fff;
 }
 
@@ -1418,7 +1419,7 @@ iframe {
 }
 
 #global-nav nav ul li ul li {
-	background: url(../images/bg-footer-noise.jpg) #000;
+	background: url(./images/bg-footer-noise.jpg) #000;
 	display: block;
 	color: #fff;
 	float: none;
@@ -1436,7 +1437,7 @@ iframe {
 	padding: 0;
 	height: 33px;
 	text-indent: -9999px;
-	background: url(jq-nav-icons.png) -6px 0;
+	background: url(./images/jq-nav-icons.png) -6px 0;
 	z-index: 10;
 }
 
@@ -1625,42 +1626,42 @@ h2.logo a {
 .jquery h2.logo a,
 .jquery-learn h2.logo a {
 	width: 243px;
-	background: url(../images/logo-jquery.png) no-repeat;
+	background: url(./images/logo-jquery.png) no-repeat;
 }
 
 .jquery-ui h2.logo a {
 	width: 253px;
-	background: url(../images/logo-jquery-ui.png) no-repeat;
+	background: url(./images/logo-jquery-ui.png) no-repeat;
 }
 
 .jquery-mobile h2.logo a {
 	width: 268px;
-	background: url(../images/logo-jquery-mobile.png) no-repeat;
+	background: url(./images/logo-jquery-mobile.png) no-repeat;
 }
 
 .sizzlejs h2.logo a {
 	width: 243px;
-	background: url(../images/logo-sizzle.png) no-repeat;
+	background: url(./images/logo-sizzle.png) no-repeat;
 }
 
 .qunitjs h2.logo a {
 	width: 243px;
-	background: url(../images/logo-qunit.png) no-repeat;
+	background: url(./images/logo-qunit.png) no-repeat;
 }
 
 .jquery-foundation h2.logo a {
 	width: 243px;
-	background: url(../images/logo-jquery-foundation.png) no-repeat;
+	background: url(./images/logo-jquery-foundation.png) no-repeat;
 }
 
 .jquery-events.jquery-foundation h2.logo a {
 	width: 243px;
-	background: url(../images/logo-jquery-events.png) no-repeat;
+	background: url(./images/logo-jquery-events.png) no-repeat;
 }
 
 .logo.small {
   height: 30px;
-  background: url('../images/projectlogosfull-small.png') no-repeat;
+  background: url('./images/projectlogosfull-small.png') no-repeat;
 }
 
 .jquery.logo.small {
@@ -1870,7 +1871,7 @@ em, i {
 }
 
 hr {
-	background-image: url(../images/gauze.png);
+	background-image: url(./images/gauze.png);
 	height: .75em;
 	border: none;
 	margin: .75em 0;
@@ -1916,7 +1917,7 @@ pre b {
 	padding-left: 20px;
 	line-height: 20px;
 	list-style-type: none;
-	background: url(../images/bullet.png) no-repeat 0 10px;
+	background: url(./images/bullet.png) no-repeat 0 10px;
 }
 
 #content ul.block-grid li {
@@ -2105,7 +2106,7 @@ pre b {
 #content h1.block,
 #content h2.block {
 	padding: 10px 2%;
-	background: url(../images/gauze.png) #ececec;
+	background: url(./images/gauze.png) #ececec;
 	text-shadow: 0 1px 0 #ffffff;
 }
 
@@ -2126,7 +2127,7 @@ p.author a {
 	margin-bottom: 20px;
 	font: 700 "klavika-web", "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
 	color: #666;
-	background: url(../images-foundation/gauze.png) #f0f0f0;
+	background: url(./images-foundation/gauze.png) #f0f0f0;
 	text-shadow: 0 1px 0 #ffffff;
 }
 
@@ -2159,7 +2160,7 @@ p.author a {
 }
 
 #banner-secondary {
-	background-image: url(../images/dark-grey-tile.png);
+	background-image: url(./images/dark-grey-tile.png);
 	margin: -20px -25px 15px;
 	padding: 20px;
 }
@@ -2229,7 +2230,7 @@ p.author a {
 }
 
 .callout-block {
-	background-image: url(../images/gauze.png);
+	background-image: url(./images/gauze.png);
 	padding: 20px;
 }
 
@@ -2303,7 +2304,7 @@ input[type="submit"].dark:hover {
 #sidebar li {
 	padding: 5px 0 5px 20px;
 	list-style-type: none;
-	background: url(../images/bullet.png) no-repeat 0 12px;
+	background: url(./images/bullet.png) no-repeat 0 12px;
 	text-shadow: 0 1px 0 #ffffff;
 }
 
@@ -2330,7 +2331,7 @@ input[type="submit"].dark:hover {
    ========================================================================== */
 
 footer {
-	background: url(../images/bg-footer-noise.jpg) repeat;
+	background: url(./images/bg-footer-noise.jpg) repeat;
 	margin-top: -20px;
 	padding-top: 40px;
 }
@@ -2404,14 +2405,14 @@ footer .footer-icon-links li:hover a:before {
 }
 
 .multiplebgs.cssgradients footer {
-	background-image: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.0)), url(../images/bg-footer-noise.jpg); /* Chrome 10+, Saf6 */
-	background-image: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,0)), url(../images/bg-footer-noise.jpg); /* Firefox 16+, IE 10+, Opera 12.50+ */
+	background-image: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.0)), url(./images/bg-footer-noise.jpg); /* Chrome 10+, Saf6 */
+	background-image: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,0)), url(./images/bg-footer-noise.jpg); /* Firefox 16+, IE 10+, Opera 12.50+ */
 	background-repeat: repeat-x, repeat;
 	background-size: 100px 15px, 140px 140px;
 }
 
 .no-multiplebgs footer, .no-cssgradients footer {
-	background-image: url(../images/bg-footer-noise.jpg);
+	background-image: url(./images/bg-footer-noise.jpg);
 	background-repeat: repeat;
 }
 
@@ -2436,7 +2437,7 @@ footer h3 span {
 	padding: 3px 10px;
 	position: relative;
 	top: -0.8em;
-	background: url(../images/bg-footer-noise.jpg) repeat #212121;
+	background: url(./images/bg-footer-noise.jpg) repeat #212121;
 	z-index: 1;
 }
 
@@ -2483,19 +2484,19 @@ footer p.copyright span.sponsor-line {
 }
 
 footer p.copyright a.mt-link {
-	background: url(../images/logo-mediatemple.png) left top no-repeat;
+	background: url(./images/logo-mediatemple.png) left top no-repeat;
 	padding-left: 31px;
 }
 
 footer p.copyright a.mc-link {
-	background: url(../images/logo-maxcdn.png) left top no-repeat;
+	background: url(./images/logo-maxcdn.png) left top no-repeat;
 	padding-left: 24px;
 	padding-top: 2px;
 	padding-bottom: 2px;
 }
 
 footer p.copyright a.wp-link {
-	background: url(../images/logo-wordpress.png) left top no-repeat;
+	background: url(./images/logo-wordpress.png) left top no-repeat;
 	padding-left: 19px;
 	padding-top: 1px;
 	display: inline-block;
@@ -3185,37 +3186,37 @@ footer .books li a cite {
 
 @media only screen and (-webkit-device-pixel-ratio: 2){
 	.jquery h2.logo a {
-		background: url(../images/logo-jquery@2x.png) no-repeat;
+		background: url(./images/logo-jquery@2x.png) no-repeat;
 		background-size: 243px 66px;
 	}
 
 	.jquery-ui h2.logo a {
-		background: url(../images/logo-jquery-ui@2x.png) no-repeat;
+		background: url(./images/logo-jquery-ui@2x.png) no-repeat;
 		background-size: 253px 66px;
 	}
 
 	.jquery-mobile h2.logo a {
-		background: url(../images/logo-jquery-mobile@2x.png) no-repeat;
+		background: url(./images/logo-jquery-mobile@2x.png) no-repeat;
 		background-size: 268px 66px;
 	}
 
 	.sizzlejs h2.logo a {
-		background: url(../images/logo-sizzle@2x.png) no-repeat;
+		background: url(./images/logo-sizzle@2x.png) no-repeat;
 		background-size: 243px 66px;
 	}
 
 	.qunitjs h2.logo a {
-		background: url(../images/logo-qunit@2x.png) no-repeat;
+		background: url(./images/logo-qunit@2x.png) no-repeat;
 		background-size: 243px 66px;
 	}
 
 	.jquery-foundation h2.logo a {
-		background: url(../images/logo-jquery-foundation@2x.png) no-repeat;
+		background: url(./images/logo-jquery-foundation@2x.png) no-repeat;
 		background-size: 243px 66px;
 	}
 
         .jquery-events.jquery-foundation h2.logo a {
-		background: url(../images/logo-jquery-events@2x.png) no-repeat;
+		background: url(./images/logo-jquery-events@2x.png) no-repeat;
 		background-size: 243px 66px;
 	}
 }
@@ -3565,15 +3566,15 @@ that IE7/8 do not support :nth-child.
 	Change the following styles to modify the appearance of ColorBox.  They are
 	ordered & tabbed in a way that represents the nesting of the generated HTML.
 */
-#cboxOverlay{background:url(../images/colorbox/overlay.png) repeat 0 0;}
-#cboxTopLeft{width:21px; height:21px; background:url(../images/colorbox/controls.png) no-repeat -101px 0;}
-#cboxTopRight{width:21px; height:21px; background:url(../images/colorbox/controls.png) no-repeat -130px 0;}
-#cboxBottomLeft{width:21px; height:21px; background:url(../images/colorbox/controls.png) no-repeat -101px -29px;}
-#cboxBottomRight{width:21px; height:21px; background:url(../images/colorbox/controls.png) no-repeat -130px -29px;}
-#cboxMiddleLeft{width:21px; background:url(../images/colorbox/controls.png) left top repeat-y;}
-#cboxMiddleRight{width:21px; background:url(../images/colorbox/controls.png) right top repeat-y;}
-#cboxTopCenter{height:21px; background:url(../images/colorbox/border.png) 0 0 repeat-x;}
-#cboxBottomCenter{height:21px; background:url(../images/colorbox/border.png) 0 -29px repeat-x;}
+#cboxOverlay{background:url(./images/colorbox/overlay.png) repeat 0 0;}
+#cboxTopLeft{width:21px; height:21px; background:url(./images/colorbox/controls.png) no-repeat -101px 0;}
+#cboxTopRight{width:21px; height:21px; background:url(./images/colorbox/controls.png) no-repeat -130px 0;}
+#cboxBottomLeft{width:21px; height:21px; background:url(./images/colorbox/controls.png) no-repeat -101px -29px;}
+#cboxBottomRight{width:21px; height:21px; background:url(./images/colorbox/controls.png) no-repeat -130px -29px;}
+#cboxMiddleLeft{width:21px; background:url(./images/colorbox/controls.png) left top repeat-y;}
+#cboxMiddleRight{width:21px; background:url(./images/colorbox/controls.png) right top repeat-y;}
+#cboxTopCenter{height:21px; background:url(./images/colorbox/border.png) 0 0 repeat-x;}
+#cboxBottomCenter{height:21px; background:url(./images/colorbox/border.png) 0 -29px repeat-x;}
 #cboxContent{background:#fff; overflow:hidden;}
 .cboxIframe{background:#fff;}
 #cboxError{padding:50px; border:1px solid #ccc;}
@@ -3581,13 +3582,13 @@ that IE7/8 do not support :nth-child.
 #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
 #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
 #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
-#cboxPrevious{position:absolute; bottom:0; left:0; background:url(../images/colorbox/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+#cboxPrevious{position:absolute; bottom:0; left:0; background:url(./images/colorbox/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
 #cboxPrevious:hover{background-position:-75px -25px;}
-#cboxNext{position:absolute; bottom:0; left:27px; background:url(../images/colorbox/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+#cboxNext{position:absolute; bottom:0; left:27px; background:url(./images/colorbox/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
 #cboxNext:hover{background-position:-50px -25px;}
-#cboxLoadingOverlay{background:url(../images/colorbox/loading_background.png) no-repeat center center;}
-#cboxLoadingGraphic{background:url(../images/colorbox/loading.gif) no-repeat center center;}
-#cboxClose{position:absolute; bottom:0; right:0; background:url(../images/colorbox/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+#cboxLoadingOverlay{background:url(./images/colorbox/loading_background.png) no-repeat center center;}
+#cboxLoadingGraphic{background:url(./images/colorbox/loading.gif) no-repeat center center;}
+#cboxClose{position:absolute; bottom:0; right:0; background:url(./images/colorbox/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
 #cboxClose:hover{background-position:-25px -25px;}
 
 /*
