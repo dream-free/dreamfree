@@ -27,7 +27,7 @@ p{margin-top:10px;padding-left:30px;}
 	-webkit-transition-property: transform; -webkit-transition-duration: 0.5s; }
 #movieposters li:hover img { -webkit-transform: rotateY(0deg); }
 
-.movieinfo { border:10px solid #fcfafa; padding:20px; width:200px; height:180px; background-color:#deddcd; margin:-195px 0 0 55px; position:absolute;
+.movieinfo { border:10px solid #fcfafa; padding:20px; width:200px; height:200px; background-color:#deddcd; margin:-195px 0 0 55px; position:absolute;
 	-moz-box-shadow:0 20px 40px #888; -webkit-box-shadow:0 20px 40px #888;
 	-webkit-transform: translateZ(30px) rotateY(30deg);
 	-webkit-transition-property: transform, box-shadow, margin; -webkit-transition-duration: 0.5s; }
