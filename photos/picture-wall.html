@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+/* BASIC RESET */
+*{margin:0; padding:0;}
+
+/* HTML ELEMENTS */
+body { background-color:#deddcd; font:14px/21px Arial,Helvetica,sans-serif; }
+p{margin-top:10px;padding-left:30px;}
+
+#photoview{width:640px;height:510px;margin:0 auto;border:1px solid black;margin-top:10px;}
+#photoview img{float:left;margin-left:10px;margin-top:10px;width:200px;}
+
+#random{display:block;margin:0 auto;margin-top:10px;width:100px;height:25px;background:purple url(01.jpg);border-radius:5px;color:white;}
+
+</style>
+<script src="move.js"></script>
+<script>
+window.onload = function(){
+	var oPhoto = document.getElementById('photoview');
+	var aImgs = oPhoto.getElementsByTagName('img');
+	var izIndex = 2;
+	
+	var arrOfImgs = [];
+	for(var i = 0; i < aImgs.length; i++){
+		arrOfImgs.push([aImgs[i].offsetLeft, aImgs[i].offsetTop]);
+		aImgs[i].index = i;
+	}
+	//把图片变成绝对定位，方便后面的移动
+	for(var i = 0; i < aImgs.length; i++){
+		aImgs[i].style.position = 'absolute';
+		aImgs[i].style.left = arrOfImgs[i][0] + 'px';
+		aImgs[i].style.top = arrOfImgs[i][1] + 'px';
+		aImgs[i].style.margin = 0;
+	}
+	
+	for(var i = 0; i < aImgs.length; i++){
+		aImgs[i].onmousedown = function(ev){
+			var ev = ev || event;
+			var This = this;
+			
+			This.style.zIndex = ++izIndex;
+			var disX = ev.clientX - This.offsetLeft;
+			var disY = ev.clientY - This.offsetTop;
+			var moveindex = -1;
+			
+			document.onmousemove = function(ev){
+				var ev = ev || event;
+				This.style.left = ev.clientX - disX + 'px';
+				This.style.top = ev.clientY - disY + 'px';
+				
+				//检测是不是有碰撞，如果有碰撞，则把最近的一个的边框变成蓝色				
+				moveindex = lowestdistance(This, aImgs);
+				for(var i = 0; i < aImgs.length; i++){
+					aImgs[i].style.border = '';				
+				}		
+				if(moveindex > -1){
+					aImgs[moveindex].style.border = '2px solid blue';
+				}				
+			};
+			
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+				
+				//鼠标弹起时有碰撞，需要交换位置
+				if(moveindex > -1){
+					startMove(This, {
+						'left':arrOfImgs[aImgs[moveindex].index][0], 'top':arrOfImgs[aImgs[moveindex].index][1]
+						});
+					startMove(aImgs[moveindex], {
+						'left' : arrOfImgs[This.index][0], 'top' : arrOfImgs[This.index][1]
+						});
+					
+					//交换索引，保证下一次移动是正确的索引
+					var temp = aImgs[moveindex].index;
+					aImgs[moveindex].index = This.index;
+					This.index = temp;
+					
+					console.log(aImgs[moveindex].index + '' + This.index);
+				}else{
+					startMove(This, {
+						'left' : arrOfImgs[This.index][0], 'top' : arrOfImgs[This.index][1]
+						});
+				}
+			};
+			
+			return false;
+		
+		};
+	}
+	
+	//随机移动位置
+	var oRandom = document.getElementById('random');
+	oRandom.onclick = function(){
+		var randomArr = [0,1,2,3,4,5,6,7,8];
+		
+		randomArr.sort(function(n1,n2){
+			return Math.random() - 0.5;
+		});
+		
+		for(var i =0; i< aImgs.length; i++){
+			startMove(aImgs[i],{
+				'left' : arrOfImgs[randomArr[i]][0], 'top' : arrOfImgs[randomArr[i]][1]
+			});
+			aImgs[i].index = randomArr[i];
+		}
+	
+	};
+	
+	function coincide(obj, objin){
+		var L1 = obj.offsetLeft;
+		var R1 = obj.offsetLeft + obj.offsetWidth;
+		var T1 = obj.offsetTop;
+		var B1 = obj.offsetTop + obj.offsetHeight;
+		
+		var L2 = objin.offsetLeft;
+		var R2 = objin.offsetLeft + objin.offsetWidth;
+		var T2 = objin.offsetTop;
+		var B2 = objin.offsetTop + objin.offsetHeight;
+		
+		if(L1 > R2 || R1 < L2 || T1 > B2 || B1 < T2){
+			return false;
+		}else{
+			return true;
+		}		
+	}
+	function lowestdistance(obj, olist){
+		var distance = -1;
+		var index = -1;
+		for(var i=0;i<olist.length;i++){
+			if( coincide(obj, olist[i]) && obj != olist[i]){
+				var a = obj.offsetLeft - olist[i].offsetLeft;
+				var b = obj.offsetTeft - olist[i].offsetTeft;
+				var c = Math.sqrt(a*a + b*b)
+				if(distance == -1){
+					distence = c;
+					index = i;
+				}else if( distance > c){
+					distance = c;
+					index = i;
+				}					
+			}			
+		}
+		return index;
+	}
+	
+};
+</script>
+</head>
+
+
+<body>
+<p>Pure js code to do the algorithm.</p>
+<p>By draging the image, you can change its orders. If the image dragged does not run into another one, it will return to its place.</p>
+<p>Clicking the random button will let all the images change to an random order.</p>
+<div id='photoview'>
+<img src='.\img\1.jpg' />
+<img src='.\img\2.jpg' />
+<img src='.\img\3.jpg' />
+<img src='.\img\4.jpg' />
+<img src='.\img\5.jpg' />
+<img src='.\img\6.jpg' />
+<img src='.\img\7.jpg' />
+<img src='.\img\8.jpg' />
+<img src='.\img\9.jpg' />
+</div>
+<input type='button' id='random' value='RANDOM' />
+</body>
+</html>
