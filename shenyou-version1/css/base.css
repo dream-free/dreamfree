@@ -1,0 +1,33 @@
+#signin{
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  right: 10px;
+  margin-top: -2em;	
+}
+.ui-content h1{
+	text-align:center;
+}
+#generalview li{
+	height:210px;
+	overflow:hidden;
+	border-top:none;
+}
+#generalview li img{
+	max-width:246px;
+	max-height:400px;
+}
+#generalview p{
+  height: 230px;
+  width: 240px;
+  background: #fff url('http://www.my23.cn/shenyou/resources/images/cblj1_2.png') no-repeat 0 -270px;
+  background-size: 75%;
+  margin-left: 30px;
+  margin-top: 0px;
+  white-space: normal;
+	}
+#generalview p span{
+	padding-top: 40px;
+	display: inline-block;
+	width: 180px;
+	}
