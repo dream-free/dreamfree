@@ -222,6 +222,10 @@ body{
 	padding-bottom:0;
 	padding-top:0;
 }
+.menu-top-container ul li a{
+	font-size:1em;
+}
+
 #mainnav .searchform {
 	margin-top:0;
 	margin-bottom:10px;
@@ -231,6 +235,7 @@ body{
 }
 #banner span{
 	margin-top:0;
+	font-size:16px;
 }
 
 
