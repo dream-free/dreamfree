@@ -125,6 +125,7 @@ body{
 }
 #banner{
 	border:1px solid #ccc;
+	margin-top:10px;
 }
 #banner input{
 	top:-20px;
@@ -202,15 +203,28 @@ body{
 	}
 }
 @media only screen and (max-width: 600px) {
+#companyinfo h5{
+	display:none;
+}
+#companyinfo h5.signin{
+	float:none;
+	display:block;
+}
 .menu-top-container, #mainnav .searchform {
 	float:none;
 	width:100%;
 }
 .menu-top-container ul{
 	padding-bottom:0;
+	padding-top:10px;
+}
+.menu-top-container ul li{
+	padding-bottom:0;
+	padding-top:0;
 }
 #mainnav .searchform {
 	margin-top:0;
+	margin-bottom:10px;
 }
 #banner img, #banner span{
 	float:none;
