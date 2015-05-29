@@ -190,6 +190,9 @@ footer{
 #footerwrapper .ten.columns,#list-countries-container{
 	padding-left:0;
 }
+footer .footer_bottom{
+	text-align:center;
+}
 /*new country selector*/
 #list-countries-container img {
   display: inline-block;
