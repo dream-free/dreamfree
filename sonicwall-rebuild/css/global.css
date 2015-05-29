@@ -169,11 +169,104 @@ body{
 #banner input:nth-of-type(3):checked~ul li:nth-of-type(3){
     display:block;
 }
-
+#content{
+	margin-top:10px;
+	border: 1px solid #D8D8D8;
+	padding-bottom:10px;
+}
+#content .columns a{
+	display:block;
+}
 /*Global style for footer*/
-
-
-
+footer{
+	background: #0085C3;
+	margin-top:10px;
+}
+#footerwrapper{
+	max-width:1240px;
+	margin:0 auto;
+	padding:0 20px;
+}
+#footerwrapper .ten.columns,#list-countries-container{
+	padding-left:0;
+}
+/*new country selector*/
+#list-countries-container img {
+  display: inline-block;
+  margin-right:5px;
+}
+#list-countries {
+  color: #fff;
+  cursor: pointer;
+}
+#list-countries > span {
+  background: url("http://software.dell.com/images/shared/sprites.png") -104px -128px no-repeat;
+  display: inline-block;
+  width: 12px;
+  height: 6px;
+  vertical-align: bottom;
+  padding-top: 6px;
+}
+#list-countries-popup {
+  position: absolute;
+  bottom: 16px;
+  padding: 0;
+  overflow: visible;
+  -moz-box-shadow: 1px 1px 5px #000;
+  -webkit-box-shadow: 1px 1px 5px #000;
+  box-shadow: 1px 1px 5px #000;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  right:-62px;
+}
+#ie7 #list-countries-popup{
+    right:-15px;
+}
+.listcountriespopupshow{
+    display:none;
+}
+#list-countries-popup > div:before,
+#list-countries-popup > div:after {
+  position: absolute;
+  bottom: -10px;
+  right: 57px;
+  content: "";
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  z-index: 1;
+}
+#list-countries-popup > div:after {
+  box-shadow: 1px 1px 5px #000;
+}
+#list-countries-popup > div > div {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  padding: 10px;
+  z-index: 2;
+}
+#list-countries-popup ul {
+  min-width: 100px;
+  list-style-type : none;
+}
+#list-countries-popup a {
+  color: #0085C3;
+  display: block;
+  padding: 2px 5px;
+  white-space: nowrap;
+}
+#list-countries-popup a.active {
+  color: #fff;
+  background-color: #0085c3;
+  }
+/*end of new country selector*/
 
 /* Media Queries
    ========================================================================== */
