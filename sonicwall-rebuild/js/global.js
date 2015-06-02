@@ -14,4 +14,8 @@ $(function(){    //new country selector
             $(this).addClass("active");
         });
 		*/
+		
+		
+	//lightbox of video
+	$(".inline").colorbox({inline:true});
 })
