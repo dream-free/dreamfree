@@ -1,0 +1,217 @@
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+body{
+	height:100%;
+	min-height:600px;
+}
+.btn {
+  float: left;
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+  margin: 0 7px 11px 0;
+  color: #888;
+
+  text-align: center;
+
+  /* so nobody selects the inside text on button */
+  user-select: none;
+
+  /* Smoothing out hover using css3 transitions, if not, the pressed button effect looks a bit hard */
+  transition: all 0.2s ease;
+}
+.info {
+  background: #d9008f;
+  box-shadow: 0px 5px #5f023f;
+  color: white;
+}
+
+.info:hover {
+  background: #b60178;
+  box-shadow: 0px 4px #3f002a;
+  color: white;
+}
+
+/* Imitate a pressed effect for buttons */
+.info:active {
+  top: 4px;
+  box-shadow: 0px 0px #d3545d;
+}
+#main-wrapper{
+	position: absolute;
+	top:10%;
+	width:100%;
+}
+
+/***********First page**************/
+#welcome{
+	position: relative;
+	margin:0 auto;
+	width:800px;
+	height:600px;
+	text-align:center;
+	color:#53de34;
+	border:1px solid black;
+}
+#welcome h2
+{ 
+	text-shadow: 
+	1px 1px 0 #CCC, 
+	2px 2px 0 #CCC, /* end of 2 level deep grey shadow */ 
+	3px 3px 0 #444, 
+	4px 4px 0 #444, 
+	5px 5px 0 #444, 
+	6px 6px 0 #444; /* end of 4 level deep dark shadow */ 
+} 
+#welcome h2{
+	line-height: 550px;
+	  font-size: 6em;
+}
+#welcome h2:hover 
+{ 
+	/* CSS3 Transform Effect */ 
+	-webkit-transform: scale(1.2); /* Safari & Chrome */ 
+	-moz-transform: scale(1.2); /* Firefox */ 
+	-o-transform: scale(1.2); /* Opera */ 
+} 
+#welcome h2 
+{ 
+	/* CSS3 Transition Effect */ 
+	-webkit-transition: all 0.5s ease-out; /* Safari & Chrome */ 
+	-moz-transition: all 0.5s ease-out; /* Firefox */ 
+	-o-transition: all 0.5s ease-out; /* Opera */ 
+} 
+#welcome span{
+  float: right;
+  width: 100px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 8px;
+}
+
+#welcome, #jingran-a, #firstyear{
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+#welcome.out, #jingran-a.out, #firstyear.out{ 
+    opacity:0;
+    filter: alpha(opacity=0);
+	height:0;
+}
+
+/***********Second page**************/
+#jingran-a{
+	position: relative;
+	margin:0 auto;
+	width:800px;
+	height:600px;
+	color:#53de34;
+	border:1px solid black;
+	overflow:hidden;
+}
+#jingran-a img{
+	position:absolute;
+	width:400px;
+	top:30px;
+	left:30px;
+	transform:rotate(-9deg);
+	-ms-transform:rotate(-9deg); /* Internet Explorer */
+	-moz-transform:rotate(-9deg); /* Firefox */
+	-webkit-transform:rotate(-9deg); /* Safari 和 Chrome */
+	-o-transform:rotate(-9deg); /* Opera */
+	   -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+#jingran-a img.roll{
+	transform:rotate(9deg);
+	-ms-transform:rotate(9deg); /* Internet Explorer */
+	-moz-transform:rotate(9deg); /* Firefox */
+	-webkit-transform:rotate(9deg); /* Safari 和 Chrome */
+	-o-transform:rotate(9deg); /* Opera */
+	}
+#jingran-a >div{
+	margin-right:10px;
+	width:250px;
+	height:280px;
+	position:absolute;
+}
+#jingran-a >img + div{
+	top:-250px;
+	right:10px;
+	background:no-repeat url('../img/talk-1.png');
+	background-size:255px 286px;
+}
+#jingran-a >img + div + div{
+	bottom:-278px;
+	right:10px;
+	background:no-repeat url('../img/talk-2.png');
+	background-size:255px 286px;
+}
+#jingran-a  span{
+  font-size: 1.6em;
+  font-family: "STLiti";
+  font-weight:bold;
+  padding:60px 30px 10px 60px;
+  position: absolute;
+}
+#jingran-a >img + div + div span{
+	font-size:2em;
+	padding-top:80px;
+	padding-left:90px;
+}
+/**************First Year******************/
+#firstyear{
+	position: relative;
+	margin:0 auto;
+	width:800px;
+	height:600px;
+	border:1px solid black;
+}
+#firstyear div{
+	width:100%;
+	height:60px;
+	margin-top:20px;
+	
+}
+.headline {
+	box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	border-radius:4px;
+	border:1px solid #ffffff;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:24px;
+	padding:10px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+#firstyear img{
+	position:absolute;
+	bottom:5px;
+}
+
