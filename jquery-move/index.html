@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery仿手机屏幕触摸切换界面效果</title>
+<meta name="description" content="jquery Promptu-menu菜单插件创建一个带有菜单的窗口来创建iPhone或Android的主屏幕触摸效果体验。可以用手指滑动图标、支持水平滑动和垂直滑动。jquery下载。" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.promptu-menu.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	$('ul.promptu-menu01').promptumenu({
+		width:272,   //自定义滚屏宽度
+		height:385, //自定义滚屏搞定
+		rows:3,     //自定义滚屏排列行数
+		columns:2,  //自定义滚屏单行图标个数
+		direction:'horizontal', //水平拖动效果
+		pages:false  //是否分页显示
+	});
+	
+	$('ul.promptu-menu02').promptumenu({
+		width:272,   //自定义滚屏宽度
+		height:385, //自定义滚屏搞定
+		rows:4,     //自定义滚屏排列行数
+		columns:2,  //自定义滚屏单行图标个数
+		direction:'vertical', //水平拖动效果
+		pages:true //是否分页显示
+	});
+	
+	$('ul.promptu-menu03').promptumenu({
+		width:500,   //自定义滚屏宽度
+		height:500, //自定义滚屏搞定
+		rows:3,     //自定义滚屏排列行数
+		columns:4,  //自定义滚屏单行图标个数
+		direction:'horizontal', //水平拖动效果
+		pages:true  //是否分页显示
+	});
+	
+	$('ul.promptu-menu04').promptumenu({
+		width:500,   //自定义滚屏宽度
+		height:500, //自定义滚屏搞定
+		rows:3,     //自定义滚屏排列行数
+		columns:4,  //自定义滚屏单行图标个数
+		direction:'vertical', //水平拖动效果
+		pages:false  //是否分页显示
+	});
+	
+});
+</script>
+
+
+</head>
+<body>
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font-family:Arial, Helvetica, sans-serif;font-size:12px;}
+.demo{width:880px;margin:0 auto;box-shadow:2px 2px 20px rgba(0,0,0,0.5);-webkit-box-shadow:2px 2px 20px rgba(0,0,0,0.5);-moz-box-shadow: 2px 2px 20px rgba(0,0,0,0.5);padding:20px 40px;}
+.demo h1{font-size:16px;color:#3366cc;height:24px;line-height:24px;margin:20px 0;}
+.demo h2{padding:0 20px;font-size:14px;margin:10px 0;}
+.demo h3{font-size:14px;line-height:24px;margin:10px 0;}
+.demo p{line-height:24px;}
+.ipadbox{background:url(images/ipad.png) no-repeat;width:593px;height:682px;overflow:hidden;}
+.ipadbox .promptumenu_window{margin:50px 0 0 47px;}
+.iphonebox{background:url(images/iphone.png) no-repeat;width:320px;height:610px;overflow:hidden;}
+.iphonebox .promptumenu_window{margin:86px 0 0 25px;}
+/* 主要元素 */
+.promptumenu_nav{z-index:5;position:absolute;bottom:5px;left:50%;margin-right:-50%;}
+.promptumenu_window{cursor:url(images/hand.ico), move;background:#EEE;position:relative;}
+.promptumenu_nav a{cursor:pointer;width:20px;height:20px;text-indent:-9999px;outline:none;background:url(images/pagelink.png) 0 -20px no-repeat;display:block;float:left;position:relative;left:-50%;margin:0 2px;}
+.promptumenu_nav a.active{background-position:0 0;}
+</style>
+	
+	<div class="demo">
+	
+		<h1>jquery Promptu-menu菜单插件</h1>
+		
+		<h3>它是做什么呢？</h3>
+			
+		<p>这个插件的目的是创建一个带有菜单的窗口来创建iPhone或类似的Android体验。</p>
+
+		<p>你必须熟悉iPhone或Android主屏幕概念。你有窗口。有各种实用的图标。如果图标的数量超过菜单上的空间，创建了新的一页。通过刷卡用手指，你可以看到下一个页面，并有互动的图标。</p>
+
+		<p>这个插件不完全一样。所有你必须做的是提供元素的无序列表，你要使用的用户，产品或其他类型的数据列表。然后调用只需$（'ul.my_list）promptumenu的插件promptumenu（）。</p>
+
+		<p>是什么使这个插件特别的是事实，我试图保持动态的经验，你的iPhone或Android刷卡时......因此，如果用户打开一个机器人，iPhone，iPad或iPod这样的移动设备的页面，他将能够用手指轻扫。还使用鼠标时，插件需要与您移动鼠标的势头在心中......因此，清单中移动与惯性，你松开鼠标后..</p>	
+		
+		<h3>用法示例</h3>
+<pre style="padding:10px;margin:0;background:#eee;">
+$('ul').promptumenu({
+	width:500,   //自定义滚屏宽度
+	height:500, //自定义滚屏搞定
+	rows:3,     //自定义滚屏排列行数
+	columns:4,  //自定义滚屏单行图标个数
+	direction:'vertical', //水平拖动效果
+	pages:false  //是否分页显示
+});
+</pre>
+		
+		<h2>iphone 图标水平拖动</h2>
+		<div class="iphonebox">
+			<ul class="promptu-menu01">
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Books.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Browser.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Calculator.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Calendar.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Camera.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Clock.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Contacts.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Gallery.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/GMail.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Mail.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Maps.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Market.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Movie Studio.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Music.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Phone.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Settings.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Talk.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/YouTube.png" alt="" /></a></li>
+			</ul>
+		</div><!--iphonebox end-->
+		
+		<h2>iphone 图标垂直拖动</h2>
+		<div class="iphonebox">
+			<ul class="promptu-menu02">
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Books.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Browser.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Calculator.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Calendar.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Camera.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Clock.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Contacts.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Gallery.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/GMail.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Mail.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Maps.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Market.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Movie Studio.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Music.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Phone.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Settings.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Talk.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/YouTube.png" alt="" /></a></li>
+			</ul>
+		</div><!--iphonebox end-->
+		
+		<h2>ipad 图标水平拖动</h2>
+		<div class="ipadbox">
+			<ul class="promptu-menu03">
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Books.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Browser.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Calculator.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Calendar.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Camera.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Clock.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Contacts.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Gallery.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/GMail.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Mail.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Maps.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Market.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Movie Studio.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Music.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Phone.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Settings.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Talk.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/YouTube.png" alt="" /></a></li>
+			</ul>
+		</div><!--ipadbox end-->
+		
+		<h2>ipad 图标垂直拖动</h2>
+		<div class="ipadbox">
+			<ul class="promptu-menu04">
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Books.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Browser.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Calculator.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Calendar.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Camera.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Clock.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Contacts.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Gallery.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/GMail.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Mail.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Maps.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Market.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Movie Studio.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Music.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Phone.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Settings.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/Talk.png" alt="" /></a></li>
+				<li><a target="_blank" href="http://www.xwcms.net/"><img src="images/YouTube.png" alt="" /></a></li>
+			</ul>
+		</div><!--ipadbox end-->
+		
+		<h3>Copyright</h3>
+		<p>Copyright (c) 2012 Janis Zarzeckis <a href="http://natrixnatrix89.net">natrixnatrix89.net</a></p>
+		<p>此插件是根据MIT和GPL版本2许可许可双。</p>
+		<p>现授予的权限，免费，任何人取得的副本此软件及相关文档（“软件”），处理没有限制的软件，包括但不限于权利使用，复制，修改，合并，发布，分发，转授，和/或出售的副本软件，并允许人士，其中软件提供如此，符合下列条件：</p>
+		<p>应包括在所有上述版权声明和本许可通知副本或实质性部分的软件。</p>
+		<p>本软件“AS IS”，不附带任何形式的明示或暗示，包括但不限于适销性担保，对于特定用途的适用性及不侵权。在任何情况下，作者或版权持有人的任何索赔，损害赔偿或其他责责任，无论是在行动的合同，侵权或否则，引起的，输出，或连接与软件或使用，或在其他交易软件。</p>
+	
+	</div><!--demo end-->
+	
+</body>
+</html>
